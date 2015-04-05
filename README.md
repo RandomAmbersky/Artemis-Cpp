@@ -34,22 +34,22 @@ You can use Artemis-Cpp as a Framework for Mac OS X development using the _Artem
 - ComponentMapper
 - ComponentType
 - ComponentTypeManager
-- Entity
+- Entity - 
 - EntityProcessingSystem
 - EntitySystem
 - SystemBitManager
-- ImmutableBag
+- ImmutableBag - Contains collection of entities
 - EntityManager
-- DelayedEntityProcessingSystem
+- DelayedEntityProcessingSystem - Systems that execute at varying intervals
 - DelayedEntitySystem
-- GroupManager
+- GroupManager - Organizes units into a named collection
 - IntervalEntityProcessingSystem
 - IntervalEntitySystem
 - Manager
 - SystemManager
 - TagManager
 - utils
-- World
+- World - Primary game instance.  Contains all managers and manages entitites.
 - Bag
 
 ### EXAMPLE

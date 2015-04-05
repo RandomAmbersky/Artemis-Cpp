@@ -10,7 +10,7 @@ namespace artemis {
      * Identifies a bitset and id for a component object
      * Do not instantiate a ComponentType, instead use the ComponentTypeManager.
      * */
-    
+
   public:
     ComponentType();
     //==================================
@@ -25,8 +25,8 @@ namespace artemis {
     std::bitset<BITSIZE> bit;
     int id;
     void init();
-    
-    
+
+
 	};
 };
 #endif // $(Guard token)

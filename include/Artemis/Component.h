@@ -11,7 +11,7 @@ namespace artemis {
   protected:
     Component() {};
   };
-  
+
 };
 
 #endif

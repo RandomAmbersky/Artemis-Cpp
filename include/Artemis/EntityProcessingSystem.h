@@ -10,7 +10,7 @@ namespace artemis {
   /**
    * @brief A typical entity system.
    *
-   * Use this when you need to process entities possessing the provided 
+   * Use this when you need to process entities possessing the provided
    * component types.
    */
 	class EntityProcessingSystem : public EntitySystem {
