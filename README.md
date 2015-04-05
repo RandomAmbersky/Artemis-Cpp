@@ -3,7 +3,7 @@ Artemis C++
 
 A C++ port of [Artemis Entity System Framework](http://gamadu.com/artemis/tutorial.html).
 
-The port was orignially written by [Sidar Talei](https://bitbucket.org/stalei/artemiscpp/src), in which he used several C++11 features such as deleted function, variadic templates, nullptr, etc…
+The port was originally written by [Sidar Talei](https://bitbucket.org/stalei/artemiscpp/src), in which he used several C++11 features such as deleted function, variadic templates, nullptr, etc…
 We wanted the framework to be portable, so we removed all C++11 feature usages.
 
 ## Compiling
@@ -152,12 +152,12 @@ int main(int argc, char **argv) {
 	- [Fixed  bug](https://github.com/vinova/Artemis-Cpp/commit/fe291598b699cd283fc029ee727669b8e7a76e24): memory leak when add a component to an entity
 	who already had this component.
 - Sept 11, 2012:
-	- [Fixed critical bug](https://github.com/vinova/Artemis-Cpp/commit/731d2c3e6f4afbd32e4d33f08f23373d62b91dd9): deleting World doesn't delete/reset all neccessary data,
+	- [Fixed critical bug](https://github.com/vinova/Artemis-Cpp/commit/731d2c3e6f4afbd32e4d33f08f23373d62b91dd9): deleting World doesn't delete/reset all necessary data,
 which will lead to memory violation when a World is deleted and a new one is created.
 - Sept 12, 2012:
 	- Removed all C++11 feature usages.
 
-### LISENCE
+### LICENSE
 
 Copyright 2011 GAMADU.COM. All rights reserved.
 
