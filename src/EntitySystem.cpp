@@ -33,17 +33,17 @@ namespace artemis {
 			processEntities(actives);
 			end();
 		}
-	};
+	}
   
 	void EntitySystem::setWorld(World *world) {
 		this->world = world;
-	};
+	}
   
 	void EntitySystem::remove(Entity &e) {
 		actives.remove(&e);
 		e.removeSystemBit(systemBit);
 		removed(e);
-	};
+	}
   
 	void  EntitySystem::setSystemBit(bitset<BITSIZE> bit) {
 		systemBit = bit;

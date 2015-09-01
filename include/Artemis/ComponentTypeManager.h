@@ -64,7 +64,7 @@ namespace artemis {
       //assert((std::is_base_of< Component, c >::value == true));
 
       return getTypeFor(typeid(c)).getId();
-    };
+    }
 
 
 

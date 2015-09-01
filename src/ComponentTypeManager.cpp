@@ -10,7 +10,7 @@ namespace artemis {
 		}
     
 		return *type;
-	};
+	}
 	
 	void ComponentTypeManager::deleteComponentTypes(){
     

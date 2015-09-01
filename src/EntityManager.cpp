@@ -15,7 +15,7 @@ namespace artemis {
     uniqueEntityId = 0;
     totalCreated = 0;
     totalRemoved = 0;
-  };
+  }
   
   void EntityManager::addComponent(Entity &e, Component * c) {
     ComponentType type = ComponentTypeManager::getTypeFor(typeid(*c));
@@ -45,7 +45,7 @@ namespace artemis {
     
     components = NULL;
     
-  };
+  }
   
   Entity& EntityManager::create() {
     
@@ -63,23 +63,23 @@ namespace artemis {
     totalCreated++;
     return *e;
     
-  };
+  }
   
   Entity& EntityManager::getEntity(int entityId) {
     return *activeEntities.get(entityId);
-  };
+  }
   
   int EntityManager::getEntityCount() {
     return count;
-  };
+  }
   
   long EntityManager::getTotalCreated() {
     return totalCreated;
-  };
+  }
   
   long EntityManager::getTotalRemoved() {
     return totalRemoved;
-  };
+  }
   
   Component * EntityManager::getComponent(Entity & e, ComponentType & type) {
     
@@ -89,7 +89,7 @@ namespace artemis {
       return bag->get(e.getId());
     
     return NULL;
-  };
+  }
   
   /**
    * Retrieves all components for one entity.
@@ -111,11 +111,11 @@ namespace artemis {
     }
 		
     return entityComponents;
-  };
+  }
   
   bool EntityManager::isActive(int entityId) {
     return activeEntities.get(entityId) != NULL;
-  };
+  }
   
   void EntityManager::refresh(Entity& e) {
     SystemManager * systemManager = world->getSystemManager();
@@ -125,7 +125,7 @@ namespace artemis {
       systems.get(i)->change(e);
     }
     
-  };
+  }
   
   void EntityManager::remove(Entity& e) {
     activeEntities.set(e.getId(), NULL);
@@ -135,7 +135,7 @@ namespace artemis {
     count--;
     totalRemoved++;
     removedAndAvailable.add(&e);
-  };
+  }
   
   void EntityManager::removeComponent(Entity &e, ComponentType & type) {
     Bag<Component* > * components = componentsByType.get(type.getId());
@@ -144,7 +144,7 @@ namespace artemis {
     components->set(e.getId(), NULL);
     e.removeTypeBit(type.getBit());
     components = NULL;
-  };
+  }
   
   void EntityManager::removeComponentsOfEntity(Entity& e) {
     for(int i=0; i<componentsByType.getCapacity(); i++) {
@@ -159,7 +159,7 @@ namespace artemis {
       components = NULL;
     }
     
-  };
+  }
   
   void EntityManager::removeAllEntities(){
     
