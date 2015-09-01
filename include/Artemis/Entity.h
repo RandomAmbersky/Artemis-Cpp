@@ -80,10 +80,8 @@ namespace artemis {
     bool isActive();
     void refresh();
     void remove();
-    void setGroup(std::string group);
-    void setTag(std::string tag);
-
-
+    void setGroup(const std::string& group);
+    void setTag(const std::string& tag);
   };
 };
 #endif // $(Guard token)

@@ -7,11 +7,11 @@ namespace artemis {
 		//this->world = &world;
 	}
   
-	Entity& TagManager::getEntity(const std::string tag) {
+	Entity& TagManager::getEntity(const std::string& tag) {
 		return *tagByEntity[tag];
 	}
   
-	bool TagManager::isSubscribed(const std::string tag) {
+	bool TagManager::isSubscribed(const std::string& tag) {
 		return (tagByEntity[tag] != NULL);
 	}
   
@@ -27,12 +27,12 @@ namespace artemis {
 
 	}
   
-	void TagManager::unSubscribe(const std::string tag) {
+	void TagManager::unSubscribe(const std::string& tag) {
 		//tagByEntity[tag] = NULL;
 		tagByEntity.erase(tag);
 	}
 	
-	void TagManager::subscribe(std::string tag, Entity &e){
+	void TagManager::subscribe(const std::string& tag, Entity &e){
 		remove(e);
 		tagByEntity[tag] = &e;
 	}

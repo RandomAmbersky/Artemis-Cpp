@@ -81,8 +81,7 @@ namespace artemis {
     systemBits = 0;
   }
   
-  void Entity::setGroup(string group) {
-    
+  void Entity::setGroup(const string& group) {
     world->getGroupManager()->set(group, *this);
   }
   
@@ -90,7 +89,7 @@ namespace artemis {
     this->systemBits = systemBits;
   }
   
-  void Entity::setTag(string tag) {
+  void Entity::setTag(const string& tag) {
     world->getTagManager()->subscribe(tag, *this);
   }
   

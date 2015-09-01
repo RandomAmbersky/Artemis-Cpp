@@ -56,7 +56,7 @@ namespace artemis {
 		}
 	}
 
-	void GroupManager::set(std::string group, Entity& e) {
+	void GroupManager::set(const std::string& group, Entity& e) {
 		remove(e);
 		
 		Bag<Entity*> * entities = entitiesByGroup[group];

@@ -22,7 +22,7 @@ namespace artemis {
 	public:
 		GroupManager();
 		~GroupManager();
-		void set(std::string group, Entity& e);
+		void set(const std::string& group, Entity& e);
 		void remove(Entity& e);
 		std::string getGroupOf(Entity& e);
 		bool isGrouped(Entity& e);
