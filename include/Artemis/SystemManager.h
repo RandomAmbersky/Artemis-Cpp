@@ -12,22 +12,22 @@ namespace artemis {
 	class World;
 
 	class SystemManager {
-  public:
-    SystemManager(World &world);
-    ~SystemManager();
-    void initializeAll();
-    Bag<EntitySystem*> & getSystems();
-    EntitySystem* setSystem(EntitySystem * stm);
+	public:
+		SystemManager(World &world);
+		~SystemManager();
+		void initializeAll();
+		Bag<EntitySystem*> & getSystems();
+		EntitySystem* setSystem(EntitySystem * stm);
 
-    template<typename eSystem>
-    EntitySystem* getSystem() {
-      return (eSystem*)(systems[&typeid(eSystem)]);
-    }
+		template<typename eSystem>
+		EntitySystem* getSystem() {
+			return (eSystem*)(systems[&typeid(eSystem)]);
+		}
 
-  private:
-    World * world;
-    std::map<const std::type_info*, EntitySystem*, type_info_comparator> systems;
-    Bag<EntitySystem*> bagged;
+	private:
+		World * world;
+		std::map<const std::type_info*, EntitySystem*, type_info_comparator> systems;
+		Bag<EntitySystem*> bagged;
 	};
 }
 

@@ -11,22 +11,22 @@ namespace artemis {
 	class EntitySystem;
 
 	class SystemBitManager {
-  private:
-    static int POS;
-    static std::map< const std::type_info*, std::bitset<BITSIZE>*, type_info_comparator > systemBits;
+	private:
+		static int POS;
+		static std::map< const std::type_info*, std::bitset<BITSIZE>*, type_info_comparator > systemBits;
 
-  public:
+	public:
 
-    static std::bitset<BITSIZE> & getBitFor(const std::type_info & type);
-    static void removeBitSets();
-    template<typename system>
-    static std::bitset<BITSIZE> & getBitFor() {
+		static std::bitset<BITSIZE> & getBitFor(const std::type_info & type);
+		static void removeBitSets();
+		template<typename system>
+		static std::bitset<BITSIZE> & getBitFor() {
 
-      //assert((std::is_base_of< EntitySystem, system >::value == true));
+			//assert((std::is_base_of< EntitySystem, system >::value == true));
 
-      return getBitFor(typeid(system));
+			return getBitFor(typeid(system));
 
-    }
+		}
 
 	};
 

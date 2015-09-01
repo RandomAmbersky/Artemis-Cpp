@@ -2,9 +2,9 @@
 #include "Artemis/World.h"
 
 namespace artemis {
-	
-  Component::~Component() {
-    
-  }
-	
+
+	Component::~Component() {
+
+	}
+
 }

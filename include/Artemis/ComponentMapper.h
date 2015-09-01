@@ -6,39 +6,39 @@
 
 namespace artemis {
 
-  template<typename c>
-  /**
-   * High performance component retrieval from entities. Use this wherever you
-   * need to retrieve components from entities often and fast.
-   */
-  class ComponentMapper {
+	template<typename c>
+	/**
+	 * High performance component retrieval from entities. Use this wherever you
+	 * need to retrieve components from entities often and fast.
+	 */
+	class ComponentMapper {
 
-  private:
+	private:
 
-    EntityManager * em;
+		EntityManager * em;
 
-  public:
+	public:
 
-    ~ComponentMapper() {
-      //Not the owner. Only a pointer to.
-      em = NULL;
-    }
+		~ComponentMapper() {
+			//Not the owner. Only a pointer to.
+			em = NULL;
+		}
 
-    void init(World& world){
-      em = world.getEntityManager();
-    }
+		void init(World& world) {
+			em = world.getEntityManager();
+		}
 
-    /**
-     *Returns the component mapped to the Entity.
-     *If there is no such component associated with the entity
-     *NULL is returned.
-     */
-    c * get(Entity & e) {
-      //ATTN perhaps pointing to the component bag is faster.
-      return (c*)em->getComponent<c>(e);
-    }
+		/**
+		 *Returns the component mapped to the Entity.
+		 *If there is no such component associated with the entity
+		 *NULL is returned.
+		 */
+		c * get(Entity & e) {
+			//ATTN perhaps pointing to the component bag is faster.
+			return (c*)em->getComponent<c>(e);
+		}
 
-  };
+	};
 }
 
 #endif // $(Guard token)

@@ -10,9 +10,9 @@ namespace artemis {
 	class Entity;
 
 	/**
-   * If you need to group your entities together, e.g. tanks going into "units" group or explosions into "effects",
-   * then use this manager. You must retrieve it using world instance.
-   */
+	* If you need to group your entities together, e.g. tanks going into "units" group or explosions into "effects",
+	* then use this manager. You must retrieve it using world instance.
+	*/
 	class GroupManager {
 	private:
 		Bag<Entity*> empty_bag;
