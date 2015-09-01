@@ -25,6 +25,6 @@ namespace artemis {
 			bool isRunning();
 
 	};
-};
+}
 
 #endif // $(Guard token)

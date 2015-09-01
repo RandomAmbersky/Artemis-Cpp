@@ -96,4 +96,4 @@ namespace artemis {
 		SystemBitManager::removeBitSets();
     ComponentType::reset();
 	}
-};
+}

@@ -1,4 +1,5 @@
 #include "Artemis/ComponentType.h"
+
 namespace artemis {
 	
 	ComponentType::ComponentType() {
@@ -26,4 +27,4 @@ namespace artemis {
   
 	std::bitset<BITSIZE> ComponentType::nextBit(1);
 	int ComponentType::nextId = 1;
-};
+}

@@ -11,4 +11,4 @@ namespace artemis {
 			{processEntity(*bag.get(i));}
 	}
 
-};
+}

@@ -49,4 +49,4 @@ namespace artemis {
 		systemBit = bit;
 	}
   
-};
+}

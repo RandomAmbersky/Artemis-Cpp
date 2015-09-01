@@ -110,4 +110,4 @@ namespace artemis {
   void Entity::remove() {
     world->deleteEntity(*this);
   }
-};
+}

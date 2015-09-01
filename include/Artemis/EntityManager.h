@@ -62,5 +62,6 @@ namespace artemis {
     Bag<Component*> entityComponents;
 
   };
-};
+}
+
 #endif // $(Guard token)

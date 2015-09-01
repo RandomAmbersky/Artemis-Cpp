@@ -60,4 +60,4 @@ namespace artemis {
     bagged.deleteData();
     bagged.clear();
   }
-};
+}

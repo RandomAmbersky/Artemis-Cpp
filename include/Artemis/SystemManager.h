@@ -29,5 +29,6 @@ namespace artemis {
     std::map<const std::type_info*, EntitySystem*, type_info_comparator> systems;
     Bag<EntitySystem*> bagged;
 	};
-};
+}
+
 #endif // $(Guard token)

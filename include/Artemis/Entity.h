@@ -83,5 +83,6 @@ namespace artemis {
     void setGroup(const std::string& group);
     void setTag(const std::string& tag);
   };
-};
+}
+
 #endif // $(Guard token)

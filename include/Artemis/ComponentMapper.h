@@ -39,5 +39,6 @@ namespace artemis {
     }
 
   };
-};
+}
+
 #endif // $(Guard token)

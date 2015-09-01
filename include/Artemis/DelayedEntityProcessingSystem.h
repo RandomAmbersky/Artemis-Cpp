@@ -25,6 +25,6 @@ namespace artemis{
 		virtual void processEntities(ImmutableBag<Entity*>& bag, float accumulatedDelta);
 		virtual void processEntity(Entity& e, float accumulatedDelta) = 0;
 	};
-};
+}
 
 #endif // $(Guard token)

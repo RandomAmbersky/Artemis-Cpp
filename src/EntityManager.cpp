@@ -189,4 +189,4 @@ namespace artemis {
     //Does not own world. Only points to it.
     this->world = NULL;  
   }
-};
+}

@@ -65,7 +65,6 @@ namespace artemis {
     void remove(Entity &e);
 	};
 
-};
+}
 
-
-#endif
+#endif // $(Guard token)

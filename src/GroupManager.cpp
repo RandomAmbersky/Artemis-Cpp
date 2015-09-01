@@ -86,4 +86,4 @@ namespace artemis {
 		entitiesByGroup.clear();
 	}
 
-};
+}

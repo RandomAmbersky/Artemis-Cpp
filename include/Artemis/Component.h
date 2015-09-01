@@ -11,7 +11,6 @@ namespace artemis {
   protected:
     Component() {};
   };
+}
 
-};
-
-#endif
+#endif // $(Guard token)

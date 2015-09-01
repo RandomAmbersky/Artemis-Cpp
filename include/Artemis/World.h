@@ -46,5 +46,6 @@ namespace artemis {
     Bag<Entity*> refreshed;
     Bag<Entity*> deleted;
 	};
-};
+}
+
 #endif // $(Guard token)

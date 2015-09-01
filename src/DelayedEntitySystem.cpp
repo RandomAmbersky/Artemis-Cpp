@@ -66,5 +66,4 @@ namespace artemis {
   {
     acc = delay;
   }
-
-};
+}

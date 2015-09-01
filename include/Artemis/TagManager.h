@@ -27,5 +27,6 @@ namespace artemis {
     Entity & getEntity(const std::string& tag);
     void remove(Entity &e);
 	};
-};
+}
+
 #endif // $(Guard token)

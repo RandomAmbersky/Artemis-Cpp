@@ -29,6 +29,6 @@ namespace artemis {
 		bool isInGroup(std::string group, Entity& e);
 		ImmutableBag<Entity*>* getEntities(std::string group);
 	};
-};
+}
 
 #endif // $(Guard token)

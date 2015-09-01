@@ -21,6 +21,6 @@ namespace artemis {
 			virtual void processEntities(ImmutableBag<Entity*> & bag);
 			virtual bool checkProcessing();
 	};
-};
+}
 
 #endif // $(Guard token)
