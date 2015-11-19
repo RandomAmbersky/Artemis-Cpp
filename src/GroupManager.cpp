@@ -9,17 +9,17 @@ namespace artemis {
 	ImmutableBag<Entity*> * GroupManager::getEntities(std::string group) {
 		Bag<Entity*> * bag = entitiesByGroup[group];
 		if(bag == NULL) {
-      // create a new empty group
-      bag = new Bag<Entity*>(32);
-      entitiesByGroup[group] = bag;
-    }
+			// create a new empty group
+			bag = new Bag<Entity*>(32);
+			entitiesByGroup[group] = bag;
+		}
 		return bag;
 	}
 
 	std::string GroupManager::getGroupOf(Entity& e) {
-		if(e.getId() < groupByEntity.getCapacity()){
+		if(e.getId() < groupByEntity.getCapacity()) {
 			std::string * group = groupByEntity.get(e.getId());
-			if(group == NULL) 
+			if(group == NULL)
 				return empty_string;
 			return  *group;
 		}
@@ -37,14 +37,14 @@ namespace artemis {
 	}
 
 	void GroupManager::remove(Entity& e) {
-		if(e.getId() < groupByEntity.getCapacity()){
-			
+		if(e.getId() < groupByEntity.getCapacity()) {
+
 			std::string * groupId = groupByEntity.get(e.getId());
-			if(groupId != NULL){
+			if(groupId != NULL) {
 				groupByEntity.set(e.getId(), NULL);
-				
+
 				Bag<Entity*> * entities = entitiesByGroup[*groupId];
-				if(entities != NULL){
+				if(entities != NULL) {
 					entities->remove(&e);
 				}
 				entities = NULL;
@@ -52,38 +52,37 @@ namespace artemis {
 				groupId = NULL;
 			}
 			groupId = NULL;
-			
+
 		}
 	}
 
-	void GroupManager::set(std::string group, Entity& e) {
+	void GroupManager::set(const std::string& group, Entity& e) {
 		remove(e);
-		
+
 		Bag<Entity*> * entities = entitiesByGroup[group];
-		if(entities == NULL){
+		if(entities == NULL) {
 			entities = new Bag<Entity*>(32);
 			entitiesByGroup[group] = entities;
 		}
 		entities->add(&e);
 		entities = NULL;
 		groupByEntity.set(e.getId(), new std::string(group));
-		
+
 	}
-	
-	GroupManager::~GroupManager(){
-		
+
+	GroupManager::~GroupManager() {
+
 		groupByEntity.deleteData();
-		
+
 		//groupByEntity.clear();
-		
+
 		std::map<std::string, Bag<Entity*>*>::iterator it;
-			
-			for(it = entitiesByGroup.begin(); it != entitiesByGroup.end(); it++)
-			{
-				delete it->second;
-			}
+
+		for(it = entitiesByGroup.begin(); it != entitiesByGroup.end(); it++) {
+			delete it->second;
+		}
 
 		entitiesByGroup.clear();
 	}
 
-};
+}
