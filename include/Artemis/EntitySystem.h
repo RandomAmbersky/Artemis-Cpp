@@ -53,8 +53,8 @@ namespace artemis {
     /*override these functions*/
     virtual void begin() {};
     virtual void end() {};
-    virtual void removed(Entity &e) {};
-    virtual void added(Entity &e) {};
+    virtual void removed(Entity &) {};
+    virtual void added(Entity &) {};
     //Abstracts
     virtual void processEntities(ImmutableBag<Entity*> & bag) = 0;
     virtual bool checkProcessing() = 0;
