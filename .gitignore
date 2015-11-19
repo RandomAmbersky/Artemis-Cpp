@@ -11,5 +11,9 @@
 *.la
 *.a
 
-# Cmake build dir
+# Cmake bits
 build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
